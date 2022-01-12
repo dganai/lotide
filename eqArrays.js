@@ -9,17 +9,18 @@ const assertEqual = function(actual, expected) {
 // use assertEqual to write test cases for various scenarios
 
 // need two arrays
-let array1 = [];
-let array2 = [];
 
-let eqArrays = function(array1, array2) {
- for (let i = 0; i < array1.length; i++) {
-   if(array1[i] !== array2[i]) {
-     return false;
-   }
- }
- return true;
-
-}
+const eqArrays = function(array1, array2) {
+  for (let i = 0; i < array1.length; i++) {
+    for (let j = 0; j < array2.length; j++) {
+      if (array1[i] === array2[j]) {
+        return true;
+      } else {
+        return   false;
+      }
+    }
+  }
+};
 
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
+assertEqual(eqArrays([1, 2, 3], [1, 4, 3]), false);
