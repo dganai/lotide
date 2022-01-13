@@ -22,11 +22,11 @@ const countOnly = function(allItems, itemsToCount) {
   const output = {};
 
   for (const item of allItems) {
-    if(itemsToCount[item]) {
+    if (itemsToCount[item]) {
       if (output[item]) {
         output[item] += 1;
       } else {
-        output[item] = 1
+        output[item] = 1;
       }
     }
   }
