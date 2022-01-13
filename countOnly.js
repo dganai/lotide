@@ -19,19 +19,19 @@ const assertEqual = function(actual, expected) {
 
 const countOnly = function(allItems, itemsToCount) {
   // how many times were that string in allItems array
-  const output = {};
+  const results = {};
 
   for (const item of allItems) {
     if (itemsToCount[item]) {
-      if (output[item]) {
-        output[item] += 1;
+      if (results[item]) {
+        results[item] += 1;
       } else {
-        output[item] = 1;
+        results[item] = 1;
       }
     }
   }
-  console.log(output);
-  return output;
+  console.log(results);
+  return results;
 };
 
 // test code below
