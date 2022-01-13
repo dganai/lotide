@@ -2,11 +2,7 @@
 const assertEqual = function(actual, expected) {
   actual = JSON.stringify(actual);
   expected = JSON.stringify(expected);
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
+  actual === expected ? console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`) : console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
 };
 // new function countLetters should take in a sentence as a string and return count of each of the letters in that sentence
 // use for..of loop with strings

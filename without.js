@@ -38,7 +38,7 @@ const without = function(source, itemsToRemove) {
   }
   console.log(newArray);
 
-};
+}
 
 // test cases below
 const words = ["hello", "world", "lighthouse"];
