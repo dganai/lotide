@@ -1,21 +1,3 @@
-// copy assertArraysEqual and eqArrays function
-
-const eqArrays = function(array1, array2) {
-  for (let i = 0; i < array1.length; i++) {
-    for (let j = 0; j < array2.length; j++) {
-      if (array1[i] === array2[j]) {
-        return true;
-      } else {
-        return   false;
-      }
-    }
-  }
-};
-
-const assertArraysEqual = function(array1, array2) {
-  eqArrays(array1, array2) ? console.log(true) : console.log(false);
-};
-
 // create middle
 // take in an array and return middle most elements of given array
 // exceptions: if elements 1 or 2, return empty array
@@ -42,14 +24,6 @@ const middle =  function(array) {
   return newArray;
 };
 
-// test below
 
-console.log(middle([1]));
-console.log(middle([1, 2]));
-console.log(middle([1, 2, 3, 4, 5]));
-console.log(middle([1, 2, 3, 4, 5, 6]));
-console.log(middle([1, 2, 3, 4, 5, 6, 7, 8, 9]));
 
-assertArraysEqual(middle([1, 2, 3]), [2]);
-assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]);
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);
+module.exports = middle;
