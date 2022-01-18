@@ -1,22 +1,3 @@
-// implementing assertArraysEqual and eqArrays
-
-const eqArrays = function(array1, array2) {
-  for (let i = 0; i < array1.length; i++) {
-    for (let j = 0; j < array2.length; j++) {
-      if (array1[i] === array2[j]) {
-        return true;
-      } else {
-        return   false;
-      }
-    }
-  }
-};
-
-const assertArraysEqual = function(array1, array2) {
-  eqArrays(array1, array2) ? console.log(true) : console.log(false);
-};
-
-
 // implement without function
 // without needs to return a subset of a given array and removing unwanted elements
 // take in a source array:
@@ -36,12 +17,8 @@ const without = function(source, itemsToRemove) {
       }
     }
   }
-  console.log(newArray);
+  return newArray;
 
-}
+};
 
-// test cases below
-const words = ["hello", "world", "lighthouse"];
-without(words, ["lighthouse"]); // no need to capture return value for this test case
-// Make sure the original array was not altered by the without function
-assertArraysEqual(words, ["hello", "world", "lighthouse"]);
+module.exports = without;
